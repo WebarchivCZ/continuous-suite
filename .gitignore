@@ -1,0 +1,9 @@
+archive-dir/*
+!archive-dir/archive_logs.sh
+project-dir/runtime-logs/*
+project-dir/stat-checks/*
+project-dir/*.cxml
+project-dir/202*
+central-dir/*
+!central-dir/stat-checker.sh
+!central-dir/start-crawler.sh 

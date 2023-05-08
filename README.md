@@ -4,7 +4,7 @@
 
 # 1. Deployement and usage of CHSS
 ## 1.1.Prerequisities
-	- Running on single VM/container and in single instance
+- Running on single VM/container and in single instance
   - Dedicated heritrix user
   - Accessible cron for dedicated user 
 	- Installation of Java
@@ -26,15 +26,17 @@
 - 1. pull and deploy
 ```console
 cd <Crawler-config-dir>
-git pull https://github.com/JanMeritus/continuous-suite
+git clone https://github.com/JanMeritus/continuous-suite.git
 cd continuous-suite
 mv project-dir <Project-dir>
 ```
+
 - 2. create new cron record
 ```console
 heritrix@crawler:~$ crontab -e
 6    4,9,13,17,21    *    *    * <project_dir>/continuous-suite.sh >> <project_dir>/logs_runtime/<project_name>-cs-`date +\%Y\%m`.log 2>&1
 ```
+
 - 3. before running, it is necessary to configure paths and variables (see lower, in 2. Customisations)
 
 # 2. Customisations
@@ -210,6 +212,7 @@ vcitane scriptu z toolboxu pre ukladanie logov
 
 ## 4.2. Structure of statisctic logs .tsv
 - samples by set up frequency, should cover main aspects of crawl runtime
+
 ```tsv
 | date | elapsedMilliseconds | lastReachedState | novel | dupByHash | warcNovelContentBytes | warcNovelUrls | activeQueues | snoozedQueues | exhaustedQueues | busyThreads | congestionRatio | currentKiBPerSec | currentDocsPerSecond | usedBytes | alertCount |
  | ----- | ---------- | ---- | ---------- | ---------- | ---------- | ------ | ---- | ---- | ---- | ---- | --- | --- | ---- | --- | ------- | ---- |
@@ -218,6 +221,7 @@ vcitane scriptu z toolboxu pre ukladanie logov
 | 09:11:38 |  155843  |  RUN  |  169967391  |  286983358  |  169967914  |  2711  |  596  |  396  |  194  |  150  |  10.399267  |  5432  |  98  |  1384826816  |  0  | 
 | 09:12:40 |  218913  |  RUN  |  318117678  |  623741404  |  318118201  |  4458  |  712  |  542  |  295  |  150  |  9.520231  |  7712  |  102  |  3413708416  |  0  |
 ```
+
 
 ## 4.3. Other logs
 - accessible in archived crawl dirs, standardly created by heritrix
