@@ -26,7 +26,7 @@
 - 1. pull and deploy
 ```console
 cd <Crawler-config-dir>
-git clone https://github.com/JanMeritus/continuous-suite.git
+git clone https://github.com/WebarchivCZ/continuous-suite.git
 cd continuous-suite
 mv project-dir <Project-dir>
 ```
