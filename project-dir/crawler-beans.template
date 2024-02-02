@@ -41,7 +41,7 @@
 # Values changing with each crawl
 
 metadata.jobName=%TYP% %TODAY_DATE%-%SHORT_N%
-metadata.operator=<actual-operator>
+metadata.operator=%ACTUAL_OPERATOR%
 metadata.description=%M_COMMENT%
 warcWriter.prefix=%TYP%-%TODAY_DATE%-%SHORT_N%_%CRAWLER_HOST%-
 warcWriter.storePaths=%CORE_STORE%/%TYP_LC%/%TYP%-%TODAY_DATE%-%SHORT_N%
