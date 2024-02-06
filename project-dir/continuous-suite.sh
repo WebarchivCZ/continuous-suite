@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # vs. 0.1 Zdenko Vozar, 2020 04 11 
 # vs. 0.2 Zdenko Vozar, 2020 04 25 Moving vs template reorganisation. Dynamic values added
 # vs. 0.25 Zdenko Vozar, 2022 02 26 adding engine initialization, cleaning and shutdown 
